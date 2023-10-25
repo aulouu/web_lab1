@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Web Lab №1</title>
+</head>
+
+<body>
+<table id="page">
+    <tbody>
+    <tr>
+        <th id="head" colspan="2">
+            Minkova Alina Andreevna <br>
+            Group P3214, Variant 2491
+        </th>
+    </tr>
+    <tr>
+        <td id="graph">
+            <div class="top">
+                <h2>Graph</h2>
+            </div>
+            <div id="image">
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+                    <line x1="0" y1="150" x2="300" y2="150" stroke="#000720" />
+                    <line x1="150" y1="0" x2="150" y2="300" stroke="#000720" />
+                    <line x1="270" y1="148" x2="270" y2="152" stroke="#000720" />
+                    <text x="265" y="140">R</text>
+                    <line x1="210" y1="148" x2="210" y2="152" stroke="#000720" />
+                    <text x="200" y="140">R/2</text>
+                    <line x1="90" y1="148" x2="90" y2="152" stroke="#000720" />
+                    <text x="75" y="140">-R/2</text>
+                    <line x1="30" y1="148" x2="30" y2="152" stroke="#000720" />
+                    <text x="20" y="140">-R</text>
+                    <line x1="148" y1="30" x2="152" y2="30" stroke="#000720" />
+                    <text x="156" y="35">R</text>
+                    <line x1="148" y1="90" x2="152" y2="90" stroke="#000720" />
+                    <text x="156" y="95">R/2</text>
+                    <line x1="148" y1="210" x2="152" y2="210" stroke="#000720" />
+                    <text x="156" y="215">-R/2</text>
+                    <line x1="148" y1="270" x2="152" y2="270" stroke="#000720" />
+                    <text x="156" y="275">-R</text>
+                    <polygon points="300,150 295,155 295,145 " fill="#cc97ff" stroke="#c282ff" />
+                    <polygon points="150,0 145,5 155,5 " fill="#cc97ff" stroke="#c282ff" />
+                    <polygon points="150,150 270,150 150,210" fill-opacity="0.4" fill="#cc97ff" stroke="#c282ff"
+                             transform="rotate(-90,149.46765,149.85016)" />
+                    <rect x="150.26588" y="150.221565" width="60" height="120" fill-opacity="0.4" fill="#cc97ff"
+                          stroke="#c282ff" />
+                    <path d="m 150.13294,150.22157 v 120 c -70.000001,0 -120.000001,-50 -120.000001,-120 z"
+                          fill-opacity="0.4" fill="#cc97ff" stroke="#c282ff" />
+                </svg>
+            </div>
+        </td>
+        <td id="table" rowspan="2">
+            <div class="top">
+                <h2>Table</h2>
+            </div>
+            <div id="result-table">
+                <table id="restable">
+                    <thead>
+                        <th class="column-type1">X</th>
+                        <th class="column-type1">Y</th>
+                        <th class="column-type1">R</th>
+                        <th class="column-type2">Hit fact</th>
+                        <th class="column-type3">Current time</th>
+                        <th class="column-type3">Execution time</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td id="coordinates">
+            <div class="top">
+                <h2>Coordinates</h2>
+            </div>
+            <form id="inpform" action="" method="POST">
+                <div id="input">
+                    <table id="input-table">
+                        <tbody>
+                        <tr>
+                            <td class="label">
+                                <label>X:</label>
+                            </td>
+                            <td>
+                                <input class="value" id="x" type="text" maxlength="15" name="x"
+                                       placeholder="from -3 to 5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <label>Y:</label>
+                            </td>
+                            <td>
+                                <input class="value" id="y" type="text" maxlength="15" name="y"
+                                       placeholder="from -3 to 3">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <label>R:</label>
+                            </td>
+                            <td>
+                                <div class="value">
+                                    <label class="rbox-label">
+                                        <input class="r" type="checkbox" name="r" value="1"> 1
+                                    </label>
+                                    <label class="rbox-label">
+                                        <input class="r" type="checkbox" name="r" value="2"> 2
+                                    </label>
+                                    <label class="rbox-label">
+                                        <input class="r" type="checkbox" name="r" value="3"> 3
+                                    </label>
+                                    <label class="rbox-label">
+                                        <input class="r" type="checkbox" name="r" value="4"> 4
+                                    </label>
+                                    <label class="rbox-label">
+                                        <input class="r" type="checkbox" name="r" value="5"> 5
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div id="buttons">
+                                    <button class="button" id="validate_button">Submit</button>
+                                    <button class="button" id="reset_button">Reset</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td class="end" colspan="2">
+            ITMO, 2023
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script src="js/index.js"></script>
+</body>
+
+</html>
