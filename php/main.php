@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-date_default_timezone_set("UTC");
+date_default_timezone_set('Europe/Moscow');
 function validateX($x) {
     $X_MIN = -3;
     $X_MAX = 5;
@@ -61,8 +61,9 @@ if(!validateForm($x, $y, $r)) {
     error("Arguments aren't valid");
 }
 
+$time = new DateTime('now');
 $hit_fact = checkHit($x, $y, $r) ? "Hit" : "Miss";
-$current_time = date("Y-m-d H:i:s e");
+$current_time = $time -> format("Y-m-d H:i:s");
 $execution_time = round((microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"]), 7);
 
 $answer = [
