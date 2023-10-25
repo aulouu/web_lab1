@@ -4,7 +4,7 @@ function isNumeric(n) {
 
 function validateX() {
     let element = document.getElementById("x");
-    let x = element.value.replace(',', '.');
+    let x = +element.value.replace(',', '.');
     if (!isNumeric(x) || parseFloat(x) >= 5 || parseFloat(x) <= -3) {
         element.setCustomValidity("Enter an integer between -3 and 5 (not including)");
         element.reportValidity();
@@ -19,7 +19,7 @@ function validateX() {
 
 function validateY() {
     let element = document.getElementById("y");
-    let y = element.value.replace(',', '.');
+    let y = +element.value.replace(',', '.');
     if (!isNumeric(y) || parseFloat(y) >= 3 || parseFloat(y) <= -3) {
         element.setCustomValidity("Enter an integer between -3 and 3 (not including)");
         element.reportValidity();
@@ -82,11 +82,11 @@ function onLoad(event) {
     document.getElementById("validate_button").addEventListener("click", event => {
         event.preventDefault();
         if (validateAll()) {
-            let x = document.querySelector("#x").value;
-            let y = document.querySelector("#y").value;
+            let x = +document.querySelector("#x").value;
+            let y = +document.querySelector("#y").value;
             for (let checkbox of checkboxes) {
                 if (checkbox.checked) {
-                    let r = checkbox.value;
+                    let r = +checkbox.value;
                     let formData = new FormData();
                     formData.append('x', x);
                     formData.append('y', y);
